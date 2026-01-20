@@ -1,0 +1,42 @@
+
+:root{
+  --blue:#004aad;
+  --bg:#f8fbff;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;margin:0;background:var(--bg);color:#0f172a;line-height:1.6}
+a{color:var(--blue)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(2,6,23,0.06)}
+.brand{font-weight:700;color:var(--blue)}
+.menu{list-style:none;display:flex;gap:18px;align-items:center;margin:0;padding:0}
+.menu a{text-decoration:none;color:inherit}
+.btn{background:var(--blue);color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none}
+.hero{background:linear-gradient(180deg,rgba(0,74,173,0.95),rgba(0,74,173,0.6));color:#fff;padding:80px 6%;text-align:center}
+.hero h1{font-size:2.4rem;margin-bottom:6px}
+.hero .lead{opacity:0.95;margin-bottom:18px}
+.section{padding:60px 6%}
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center}
+.photo-wrap{width:220px;height:220px;border-radius:120px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 8px 20px rgba(2,6,23,0.06)}
+.profile{width:100%;height:100%;object-fit:cover;display:block}
+h2{color:var(--blue);margin-bottom:14px}
+.skills-list{list-style:none;padding-left:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.06)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.contact-card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.06)}
+.contact-form{background:#fff;padding:18px;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.06);display:flex;flex-direction:column;gap:10px}
+.contact-form input,.contact-form textarea{padding:10px;border:1px solid #e6eefc;border-radius:8px}
+.btn-outline{display:inline-block;padding:8px 12px;border-radius:8px;border:1px solid var(--blue);text-decoration:none;color:var(--blue)}
+.footer{padding:24px;text-align:center;color:var(--muted)}
+
+/* fade-in animation */
+.fade-in{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:800px){
+  .about-grid{grid-template-columns:140px 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .menu{display:none}
+}
